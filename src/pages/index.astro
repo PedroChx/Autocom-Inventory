@@ -12,7 +12,7 @@ import Label from "../components/Label.astro";
     <meta name="generator" content={Astro.generator} />
     <title>Index</title>
   </head>
-  <body class="min-h-screen grid place-items-center">
+  <body>
     {
       user ? (
         <div class="flex flex-col gap-2">
@@ -25,16 +25,19 @@ import Label from "../components/Label.astro";
           </a>
         </div>
       ) : (
-        <>
+        <main>
           <Layout title="Autocom">
             <Label />
           </Layout>
+          <h3>
+            
+          </h3>
           <div class="flex flex-col gap-2">
             <a class="underline" href="/signin">
               Sign In With Username/Password
             </a>
           </div>
-        </>
+        </main>
       )
     }
   </body>
@@ -51,7 +54,6 @@ import Label from "../components/Label.astro";
 	main {
 		margin: auto;
 		padding: 1rem;
-		width: 800px;
 		max-width: calc(100% - 2rem);
 		color: rgb(5, 0, 0);
 		font-size: 20px;
