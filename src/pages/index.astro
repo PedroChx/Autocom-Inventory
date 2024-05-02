@@ -38,12 +38,8 @@ import Label from "../components/Label.astro";
     }
   </body>
   <footer>
-      <a href="/signin"  class="sign">
-        Sign In
-      </a>
-      <a href="/catalogue" class="access">
-        Acceder al Catálogo
-      </a>
+    <a href="/catalogue" class="access"> Acceder al Catálogo </a>
+    <a href="/signin" class="sign"> Accede como vendedor </a>
   </footer>
 </html>
 
@@ -68,30 +64,44 @@ import Label from "../components/Label.astro";
   footer {
     position: absolute;
     top: 85%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 2rem;
+    width: 35%;
+  }
+  .access {
+    color: white;
+    padding: 1rem;
+    margin: auto;
+    font-weight: bold;
+    background-color: #c20f2f;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease; 
+  }
+
+  .access:hover {
+    background-color: #e51935; 
+    transform: scale(1.05);
+  }
+
+  .sign {
+    color: white;
+    padding: 1rem;
+    margin: auto;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease; 
+  }
+
+  .sign:hover{
+    background-color: rgba(0, 0, 0, 0.539);
+    transform: scale(1.05);
   }
 
   .underline {
     color: azure;
-  }
-
-  .sign {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    color: white;
-    padding: 1rem;
-    margin: auto;
-    font-weight: bold;
-  }
-
-  .access {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    color: white;
-    padding: 1rem;
-    margin: auto;
-    font-weight: bold;
   }
 
   .title {
@@ -102,7 +112,7 @@ import Label from "../components/Label.astro";
     padding: 1rem;
   }
 
-  .description{
+  .description {
     padding: 1rem;
   }
 </style>
